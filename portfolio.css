@@ -397,19 +397,19 @@ body{
 }
 
 .progress-line.css span {
-    width: 50%;
+    width: 70%;
 }
 
 .progress-line.python span {
-    width: 15%;
+    width: 60%;
 }
 
 .progress-line.javascript span {
-    width: 10%;
+    width: 15%;
 }
 
-.progress-line.react span {
-    width: 2%;
+.progress-line.django span {
+    width: 50%;
 }
 
 .progress-line span::after {
@@ -430,17 +430,17 @@ body{
 }
 
 .progress-line.css span::after {
-    content: "50%";
+    content: "70%";
 }
 .progress-line.javascript span::after {
-    content: "10%";
-}
-.progress-line.python span::after {
     content: "15%";
 }
+.progress-line.python span::after {
+    content: "60%";
+}
 
-.progress-line.react span::after {
-    content: "2%";
+.progress-line.django span::after {
+    content: "50%";
 }
 
 .progress-line span::before {
