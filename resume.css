@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #ff7613;
+    --text-color: #c2c2c2;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-family: inter, sans-serif;
+    background-color: black;
+    color: white;
+    padding: 30px;
+}
+
+/* common styles */
+a{
+    color: white;
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    border-radius: 50%;
+}
+.description{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: justify;
+}
+.title{
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    /* margin: 1rem 0 0 0; */
+    text-transform: uppercase;
+}
+.item{
+    margin-top: 2rem;
+}
+.item_preTitle{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 300;
+    margin-top: 1.5rem;
+}
+.item_title{
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 500;
+    margin: 0.8rem 0;
+}
+.item_subtitle{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+    margin: 1rem 0;
+}
+.list_items{
+    margin:1rem;
+    margin-left: 3rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: justify;
+}
+ul li{
+    margin-bottom: 1rem;
+}
+
+.date{
+    float: inline-end;
+    font-size: 1.3rem;
+}
+/* layouts */
+.container{
+    max-width: 1000px;
+    width: 90%;
+    margin: 4rem auto;
+    display: grid;
+    padding: 5rem;
+    background-color: #141414;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    box-shadow: 5px 5px 30px var(--primary-color);
+}
+@media only screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 2rem;
+    }
+}
+
+.profile{
+    grid-column: 1/-1;
+    margin-bottom: 2rem;
+}
+
+/* profile */
+.profile_container{
+    display: flex;
+    gap: 2rem;
+}
+.profileimg{
+    max-width: 250px;
+}
+.first_name{
+    color: aliceblue;
+    font-weight:400;
+    font-size: clamp(2rem, 8vw, 4rem);   /*2rem - lowest font size, 4rem highest font size, 8vw will default fontsize will be adjusted according to diplay size*/
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: -0.8rem;
+}
+.last_name{
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 15vw, 7rem);
+    text-transform: uppercase;
+    display: block;
+}
+.profile_title{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* download button */
+.download{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.downloadBtn{
+    width: 27%;
+    display: flex;
+    font-size: 1.6rem;
+    margin-top: 1.2rem;
+    padding: 8px;
+    background-color: #ff7613;
+    outline: none;
+    transition-duration: 0.5s;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+}
+.downloadBtn:hover{
+    background-color: #141414;
+    color: var(--primary-color);
+}
+@media only screen and (max-width:768px){
+    .profile_container{
+        flex-direction: column;
+    }
+    .downloadBtn{
+        font-size: 1.2rem;
+    }
+}
+
+.group-1, .group-2{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* contact */
+.group-3{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+.group-3> div{
+    flex: 1;
+}
+
+@media only screen and (max-width:768px){
+    .group-3{
+        flex-direction: column;
+    }
+    .profile{
+        margin-bottom: 0;
+    }
+}
+.mob_no, .email{
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    display: block;
+    margin: 10px 0;
+    transition-duration: 0.3s;
+}
+.mob_no:hover, .email:hover{
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+/* Social */
+.social_items{
+    margin-top: 2rem;
+}
+.social_anchor{
+    margin: 1.8rem 0;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--text-color);
+    transition-duration: 0.3s;
+}
+.social_anchor:hover{
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+.group-3_seperation{
+    grid-column: 1/-1;
+    width: 100%;
+    color: #454545;
+}
