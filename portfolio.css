@@ -409,7 +409,7 @@ body{
 }
 
 .progress-line.django span {
-    width: 50%;
+    width: 55%;
 }
 
 .progress-line span::after {
